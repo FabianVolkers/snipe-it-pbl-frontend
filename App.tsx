@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './app/views/Home'
-import ScanScreen from './app/views/CameraView'
+import AssetScreen from './app/views/AssetView';
+/* import ScanScreen from './app/views/CameraView' */
 
 const Stack = createStackNavigator();
 
@@ -15,12 +16,16 @@ export default function App() {
     <Stack.Screen
             name="Home"
             component={Home}
-            options={{ title: 'Awesome app' }}
+            options={{ title: 'Snipe-lIghT' }}
           />
-     <Stack.Screen
+    <Stack.Screen 
+            name="Asset"
+            component={AssetScreen}
+          />
+{/*      <Stack.Screen
             name="Scan"
             component={ScanScreen}
-          />
+          /> */}
     </Stack.Navigator>
   </NavigationContainer>
   )
